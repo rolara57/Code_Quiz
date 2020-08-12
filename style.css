@@ -1,3 +1,14 @@
+header { 
+    text-align: center;
+    color: blue;
+    font-family: "Times New Roman", Times, serif;
+}
+
 #start {
-float: right;
+    float: right;
+    
+}
+
+#question {
+float: center;
 }

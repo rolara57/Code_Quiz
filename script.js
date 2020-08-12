@@ -1,7 +1,10 @@
 var timeEl = document.querySelector(".time");
 var mainEl = document.getElementById("main");
-
+var actionBtn = document.getElementById("action");
 var secondsLeft = 300;
+
+//eventListener
+playButton.addEventListener("click", setTime);
 
 function setTime() {
   var timerInterval = setInterval(function() {
@@ -25,5 +28,3 @@ function sendMessage() {
   mainEl.appendChild(imgEl);
 
 }
-
-setTime();
