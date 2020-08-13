@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet"  type = "text/css" href="./style.css" />
+ 
     <title>Codequiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Name of the game-->
-   <header>
-       <h1>Code Quiz</h1>
-   </header>
-   <!--start button and timer-->
-   <div id="start">
-    <button id = "Action" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+    <header>
+      <h1>Code Quiz</h1>
+    </header>
+    <!--start button and timer-->
+    <div id="start">
+     <button
+        id="start-button"
+        type="button"
+        class="btn btn-primary"
+        data-toggle="button"
+        aria-pressed="false"
+      >
+
         Start the Action
       </button>
-       <div>timer</div> 
-    </div> 
-    <!--score-->  
-    <div>score</div> 
-    <!--questions-->
-    <div id = "question">
-        <div class="card w-75">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary" id = "a">Button</a>
-              <a href="#" class="btn btn-primary" id = "b">Button</a>
-              <a href="#" class="btn btn-primary" id = "c">Button</a>
-              <a href="#" class="btn btn-primary" id = "d">Button</a>
-            </div>
-          </div>
-    </div>   
-</body>
+      <h3>Seconds left: <span id="time-left">10</span></h3>
+      <!--<button id="start-button">Start</button>-->
+      
+    </div>
+    <!--score-->
+    <h3>score: <span id="scoreEl">0</span></h3>
+    <!--question buttons-->
+    <div id="question">
+      <div class="card w-75">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            With supporting text below as a natural lead-in to additional
+            content.
+          </p>
+          <a href="#" class="btn btn-primary" id="a">Button</a>
+          <a href="#" class="btn btn-primary" id="b">Button</a>
+          <a href="#" class="btn btn-primary" id="c">Button</a>
+          <a href="#" class="btn btn-primary" id="d">Button</a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script> 
+  </body>
 </html>

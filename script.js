@@ -1,30 +1,19 @@
-var timeEl = document.querySelector(".time");
-var mainEl = document.getElementById("main");
-var actionBtn = document.getElementById("action");
-var secondsLeft = 300;
 
-//eventListener
-playButton.addEventListener("click", setTime);
-
-function setTime() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft //+ " seconds left till colorsplosion.";
-
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-      sendMessage();
-    }
-
-  }, 1000);
-}
-
-function sendMessage() {
-  timeEl.textContent = " ";
-
-  var imgEl = document.createElement("img");
-
-  imgEl.setAttribute("src", "images/image_1.jpg");
-  mainEl.appendChild(imgEl);
-
-}
+//This function is where the timer runs
+document.addEventListener('DOMContentLoaded',() => {
+  const timeLeftDisplay = document.querySelector('#time-left');
+  const startBtn = document.querySelector('#start-button');
+  let timeLeft = 10
+  
+  function countDown(){
+      setInterval (function() {
+     if(timeLeft <= 0 ) {
+         clearInterval(timeLeft = 0)
+     } 
+     timeLeftDisplay.innerHTML = timeLeft
+     timeLeft -=1
+      }, 1000)
+  
+  }
+  startBtn.addEventListener('click', countDown)
+  })
